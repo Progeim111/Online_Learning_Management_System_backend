@@ -24,6 +24,31 @@ app.use((err, req, res, next) => {
     res.status(status).send(err.message);
 })
 
+// Register endpoint
+app.post('/users', (req, res) => {
+    // Get the required information from the request body
+    const name = req.body.name;
+    const email = req.body.email;
+    const password = req.body.password;
+    const confirmPassword = req.body['confirm-password'];
+
+    // Perform validation checks
+    if (!name || !email || !password || !confirmPassword) {
+        return res.status(400).json({ message: 'All fields are required' });
+    }
+
+    if (password !== confirmPassword) {
+        return res.status(400).json({ message: 'Passwords do not match' });
+    }
+
+    // Perform account creation and database storage
+    // ...
+
+    // Return a success message
+    return res.status(201).json({ message: 'Account created successfully' });
+});
+
+
 app.listen(port, () => {
     console.log(`App running. Docs at http://localhost:${port}/docs`);
 })
