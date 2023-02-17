@@ -27,13 +27,13 @@ app.use((err, req, res, next) => {
 // Register endpoint
 app.post('/users', (req, res) => {
     // Get the required information from the request body
-    const name = req.body.name;
+    const Username = req.body.Username;
     const email = req.body.email;
     const password = req.body.password;
     const confirmPassword = req.body['confirm-password'];
 
     // Perform validation checks
-    if (!name || !email || !password || !confirmPassword) {
+    if (!Username || !email || !password || !confirmPassword) {
         return res.status(400).json({ message: 'All fields are required' });
     }
 
