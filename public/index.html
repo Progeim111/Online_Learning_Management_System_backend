@@ -9,24 +9,24 @@
     <title>Online Learning Management System</title>
 </head>
 <body>
-    <h1>HERE BE YOUR CLIENT APP</h1>
-    <div class="container">
-        <h1>Registration</h1>
-        <form>
-            <label for="Username">Username:</label>
-            <input type="text" id="Username" name="Username">
+<h1>HERE BE YOUR CLIENT APP</h1>
+<div class="container">
+    <h1>Registration</h1>
+    <form action="/users" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
 
-            <label for="confirm-password">Confirm Password:</label>
-            <input type="password" id="confirm-password" name="confirm-password">
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password">
 
-            <button type="submit">Register</button>
-        </form>
-    </div>
+        <button type="submit">Register</button>
+    </form>
+</div>
 </body>
 </html>
