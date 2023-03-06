@@ -67,6 +67,7 @@ app.post('/users', (req, res) => {
             .json({ message: 'Password must be between 6 and 20 characters long' });
     }
 
+
     if (!/\d/.test(password)) {
         return res.status(400).json({ message: 'Password must contain at least one number' });
     }
